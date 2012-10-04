@@ -35,5 +35,9 @@ public class Projet {
         }
         return tmp;
     }
+
+    public boolean tachePresente(Tache t){
+        return taches.contains(t);
+    }
 }
 
