@@ -7,15 +7,12 @@ public class Tache {
     private static long idGlobal = 0;
 
     Tache() {
-        nom = "";
-        description = "";
-        id = idGlobal;
-        idGlobal++;
+        this("","");
     }
 
-    Tache(String nom, String description) {
-        this.nom = nom;
-        this.description = description;
+    Tache(String givenName, String givenDesc) {
+        nom = givenName;
+        description = givenDesc;
         id = idGlobal;
         idGlobal++;
     }
