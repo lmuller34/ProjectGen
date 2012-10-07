@@ -27,9 +27,23 @@ public class Projet {
             }
         }
     }
+    
+    public Tache getTache(int i){
+        return taches.get(i);
+    }
+    
+    public void avancementProjet(int date){
+        int tacheFinies = 0;
+        for(int i=0;i<taches.size();i++){
+            if(taches.get(i).getDateFin()<=date){
+                tacheFinies++;
+            }
+        }
+        System.out.println("Au " + date + " du mois, l\'avancement du projet est de " + (float)tacheFinies/taches.size()*100 + "%");
+    }
 
     public String toString() {
-        String tmp = "";
+        String tmp = "nomProjet: ";
         tmp += nomProjet + "\n";
         for (int i = 0; i < taches.size(); i++) {
             tmp += taches.get(i) + "\n";
