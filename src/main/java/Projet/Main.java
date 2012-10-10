@@ -23,9 +23,9 @@ public class Main {
         p.supprimerTache(4);
         System.out.println(p.toString());
         
-        p.avancementProjet(10);
-        p.avancementProjet(14);
-        p.avancementProjet(25);
+        p.avancementProjet();
+        p.avancementProjet(MAINTENANT+5*JOUR);
+        p.avancementProjet();
         System.out.println("");
     }
 }

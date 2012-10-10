@@ -3,24 +3,24 @@ package Projet;
 public class Tache {
 
     private String nom, description;
-    private long id;
-    private static long idGlobal = 0;
+    private int id;
+    private static int idGlobal = 0;
     private long datedbt, datefin;
 
-    Tache() {
+    public Tache() {
         this("","",0,0);
     }
 
-    Tache(String givenName, String givenDesc, long dated, long datef) {
-        nom = givenName;
-        description = givenDesc;
+    public Tache(String nom, String description, long datedbt, long datefin) {
+        this.nom = nom;
+        this.description = description;
         id = idGlobal;
         idGlobal++;
-        datedbt = dated;
-        datefin = datef;
+        this.datedbt = datedbt;
+        this.datefin = datefin;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
