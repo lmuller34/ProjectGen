@@ -39,8 +39,12 @@ public class Projet {
                 tacheFinies++;
             }
         }
-        System.out.println("Au " + date + " du mois, l\'avancement du projet est de " + (float)tacheFinies/taches.size()*100 + "%");
+        if(taches.size()==0)
+            return;
+        System.out.println("Au " + date + " du mois, l\'avancement du projet est de " + (float)tacheFinies/taches.size()*100.0+ "%");
     }
+    
+    
 
     public String toString() {
         String tmp = "nomProjet: ";
