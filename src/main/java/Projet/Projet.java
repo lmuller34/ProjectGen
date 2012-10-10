@@ -13,7 +13,7 @@ public class Projet {
     }
 
     public void rajouterTache(Tache tache) {
-        if(getTache(tache.getId())==null)
+        if(getTache(tache.getId()) == null)
             taches.add(tache);
     }
 
