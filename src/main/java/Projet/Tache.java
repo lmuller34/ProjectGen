@@ -7,15 +7,19 @@ public class Tache {
     private static int idGlobal = 0;
     private long datedbt, datefin;
 
-    public Tache() {
+    public Tache() throws Exception {
         this("","",0,0);
     }
 
-    public Tache(String nom, String description, long datedbt, long datefin) {
+    public Tache(String nom, String description, long datedbt, long datefin) throws Exception {
         this.nom = nom;
         this.description = description;
         id = idGlobal;
         idGlobal++;
+        
+        if(datedbt>datefin)
+            throw new Exception("Date de debut et de fin du projet incorrecte !");
+        
         this.datedbt = datedbt;
         this.datefin = datefin;
     }
